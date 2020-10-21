@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <vue-typer :text="['welcome this web site\nthis is my schedule calender\n探し物は見つかりそうですか？\n\n\n']"
+    class="top-text" :repeat="0" :preTypeDelay="1000" :typeDelay="120" :preEraseDelay="5000" :eraseDelay="2000"></vue-typer><br>
+
     <font-awesome-icon icon="birthday-cake" class="icon"/>
     <font-awesome-icon icon="birthday-cake" class="icon"/>
     <font-awesome-icon icon="birthday-cake" class="icon"/>
