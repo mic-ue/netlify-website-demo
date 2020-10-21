@@ -11,6 +11,9 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 import VueTyperPlugin from 'vue-typer'
 Vue.use(VueTyperPlugin)
 
+import VueParticles from 'vue-particle'
+Vue.use(VueParticles)
+
 Vue.config.productionTip = false
 
 new Vue({

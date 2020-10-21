@@ -1,5 +1,23 @@
 <template>
   <div id="app">
+    <vue-particles
+      color="#dedede"
+      :particleOpacity="0.7"
+      :particlesNumber="100"
+      shapeType="circle"
+      :particleSize="4"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="1"
+      :hoverEffect="true"
+      hoverMode="bubble"
+      :clickEffect="true"
+      clickMode="push"
+    >
+    </vue-particles>
     <vue-typer :text="['welcome this web site\nthis is my schedule calender\n探し物は見つかりそうですか？\n\n\n']"
     class="top-text" :repeat="0" :preTypeDelay="1000" :typeDelay="120" :preEraseDelay="5000" :eraseDelay="2000"></vue-typer><br>
 
@@ -36,13 +54,16 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color:royalblue;
   margin-top: 60px;
-}
 
+  background-color: black;
+}
 .icon {
   margin-right: 10px;
   font-size: 2em;
 }
-
+.vue-typer .custom.char {
+  color:royalblue;
+}
 </style>
