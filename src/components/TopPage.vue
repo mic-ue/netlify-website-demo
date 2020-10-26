@@ -21,19 +21,25 @@
       </vue-particles>
     </div>
 
-    <div class="contents">
-      <vue-typer :text="['TWST GOODS CALENDAR\n']"
-        class="top-text" :repeat="0" :preTypeDelay="1000" :typeDelay="120" :preEraseDelay="5000" :eraseDelay="2000">
-      </vue-typer>
-      <br>
-
-      <font-awesome-icon icon="calendar-alt" class="icon"/>
-      <font-awesome-icon icon="book" class="icon"/>
-      <font-awesome-icon icon="hat-wizard" class="icon"/>
-      <font-awesome-icon icon="broom" class="icon"/>
-      <font-awesome-icon icon="birthday-cake" class="icon"/>
-      <font-awesome-icon icon="fire" class="icon"/>
-    </div>
+    <b-container class="contents">
+      <b-row align-h="center" md="4">
+        <b-col align-self="stretch">
+          <b-row class="text-center">
+            <vue-typer :text="['TWST GOODS CALENDAR\n']"
+              class="top-text" :repeat="0" :preTypeDelay="1000" :typeDelay="120" :preEraseDelay="5000" :eraseDelay="2000">
+            </vue-typer>
+          </b-row>
+          <b-row>
+            <font-awesome-icon icon="calendar-alt" class="icon"/>
+            <font-awesome-icon icon="book" class="icon"/>
+            <font-awesome-icon icon="hat-wizard" class="icon"/>
+            <font-awesome-icon icon="broom" class="icon"/>
+            <font-awesome-icon icon="birthday-cake" class="icon"/>
+            <font-awesome-icon icon="fire" class="icon"/>
+          </b-row>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -46,19 +52,31 @@ export default {
 
 <style scoped>
 .top {
-  width: 100vw;
+  /* display: flex; */
+  position: relative;
+  width: 90%;
   height: 70vw;
-  position: relative; 
   background-color:#222831;
+}
+.vue-typer .custom.char {
+  color: #eee;
 }
 .particles {
   display: flex;
+  width: 100%;
   height: 100%;
 }
 .contents {
   position: absolute;
-  top: 40%;
-  left: 25%;
-  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  color: #eee;
+}
+.icon {
+
 }
 </style>

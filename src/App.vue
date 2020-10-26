@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <TopPage />
-    <font-awesome-icon icon="birthday-cake" class="icon"/>
-    <font-awesome-icon icon="birthday-cake" class="icon"/>
-    <font-awesome-icon icon="birthday-cake" class="icon"/>
-    <font-awesome-icon icon="birthday-cake" class="icon"/>
-    <font-awesome-icon icon="birthday-cake" class="icon"/>
+    <span class="circle" style="background-color:#222831">#222831</span>
+    <span class="circle" style="background-color:#393e46">#393e46</span>
+    <span class="circle" style="background-color:#0092ca">#0092ca</span>
+    <span class="circle" style="background-color:#eeeeee">#eeeeee</span>
     
+    <TopPage class="page top" />
+    <Content class="page content" />
+
     <font-awesome-icon :icon="['fab','github']" class="icon"/>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -17,12 +18,14 @@
 import 'normalize.css'
 import HelloWorld from './components/HelloWorld.vue'
 import TopPage from './components/TopPage'
+import Content from './components/Content'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     TopPage,
+    Content,
   }
 }
 </script>
@@ -36,28 +39,41 @@ html, body, #app {
 
 #app {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'M PLUS 1p', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #0092ca;
-  margin-top: 60px;
+  /* color: #0092ca; */
+  /* margin-top: 60px; */
 
-  background-color: gray;
+  background-color: #eeeeee;
+}
+.row {
+  padding: 1em;
 }
 
-#main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+.page {
+  margin: 1rem;
 }
+
 .icon {
   margin-right: 10px;
   font-size: 1.5em;
+  color: #eee;
 }
-.vue-typer .custom.char {
-  color: #0092ca;
+
+.circle {
+  padding:15px;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  color: black;
 }
+
 </style>
