@@ -8,22 +8,19 @@
     <TopPage class="page top" />
     <Content class="page content" />
 
-    <font-awesome-icon :icon="['fab','github']" class="icon"/>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
 import 'normalize.css'
-import HelloWorld from './components/HelloWorld.vue'
 import TopPage from './components/TopPage'
 import Content from './components/Content'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     TopPage,
     Content,
   }
@@ -38,7 +35,7 @@ html, body, #app {
 }
 
 #app {
-  position: relative;
+  /* position: relative; */
 
   display: flex;
   flex-direction: column;
@@ -60,7 +57,7 @@ html, body, #app {
 }
 
 .page {
-  margin: 1rem;
+  margin: 5rem;
 }
 
 .icon {
