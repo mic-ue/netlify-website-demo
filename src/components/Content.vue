@@ -22,7 +22,8 @@
 
   padding: 2rem;;
 
-  background-color: #0092ca;
+  background-color: #eee;
+  color: #999fa8;
 }
 .calendar {
   width: 100%;
